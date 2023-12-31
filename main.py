@@ -3,11 +3,6 @@ import csv
 from datetime import date
 import time
 from datetime import datetime
-import pandas as pd
-data=pd.read_csv('tracker.csv')
-time_=data['Minutes']
-total_time=time_.sum()
-print(f"Today you had worked for {total_time} minutes")
 csvfile = open('tracker.csv', 'a',newline='\n')
 c = csv.writer(csvfile)
 data=[]
