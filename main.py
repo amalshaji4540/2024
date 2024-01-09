@@ -22,14 +22,18 @@ data.append(difference)
 seconds = difference.total_seconds() 
 minutes = round(seconds / 60,2)
 data.append(minutes)
+print(f'Start time is {start_time} \n')
+print(f'Your stop time is {end_time} \n')
 print(f'You had worked for \n{minutes} minutes')
 # write a column headings row - do this only once -
 desc=input("Do you want to add this data ? [Y/n]\n")
 if(desc=='Y' or desc=='y'):
     c.writerow(data)
+    print("Data is added to the sheet")
 # save and close the file
     csvfile.close()
 else:
+    print("Data is not added")
     csvfile.close()
 
 
